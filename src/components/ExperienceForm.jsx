@@ -3,10 +3,10 @@ import { useState } from "react";
 const ExperienceForm = (props) => {
   return (
     <>
-      <form>
-        <div>
+      <form className="form rounded-lg flex flex-col gap-4">
+        <div >
           <label>
-            Company Name :
+            Company Name : 
             <input
               type="text"
               id="company"
@@ -54,12 +54,13 @@ const ExperienceForm = (props) => {
           </label>
         </div>
         <div>
-          <label>
+          <label className="flex items-center">
             Description :
-            <input
+            <textarea
               type="text"
               id="description"
               name="description"
+              rows="4" cols="20"
               value={props.description}
               onChange={props.onEdit}
               required

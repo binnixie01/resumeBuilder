@@ -8,7 +8,7 @@ const App = () => {
   const [personalInfo, setpPersonalInfo] = useState({
     name: "",
     email: "",
-    phoneNumber: "",
+    number: "",
   });
   const [qualification, setQualification] = useState({
     school: "",
@@ -42,31 +42,34 @@ const App = () => {
     setExperience(newExperience);
   };
   return (
-    <>
-      <PersonalForm
-        name={personalInfo.name}
-        email={personalInfo.email}
-        number={personalInfo.number}
-        onEdit={handlePersonalInfo}
-      />
-      <QualificationForm
-        school={qualification.school}
-        degree={qualification.degree}
-        startDate={qualification.startDate}
-        endDate={qualification.endDate}
-        onEdit={handleQualification}
-      />
-      <ExperienceForm
-        company={experience.company}
-        position={experience.position}
-        startDate={experience.startDate}
-        endDate={experience.endDate}
-        description={experience.description}
-        onEdit={handleExperience}
-      />
-
-      <Cv personalInfo={personalInfo} />
-    </>
+    <div id="home" className="flex justify-between">
+      <div id="form" className="flex flex-col gap-6 ml-12 mt-10">
+        <PersonalForm
+          name={personalInfo.name}
+          email={personalInfo.email}
+          number={personalInfo.number}
+          onEdit={handlePersonalInfo}
+        />
+        <QualificationForm
+          school={qualification.school}
+          degree={qualification.degree}
+          startDate={qualification.startDate}
+          endDate={qualification.endDate}
+          onEdit={handleQualification}
+        />
+        <ExperienceForm
+          company={experience.company}
+          position={experience.position}
+          startDate={experience.startDate}
+          endDate={experience.endDate}
+          description={experience.description}
+          onEdit={handleExperience}
+        />
+      </div>
+      <div id="cv" className="mt-10 flex">
+        <Cv personalInfo={personalInfo} qualification={qualification} />
+      </div>
+    </div>
   );
 };
 

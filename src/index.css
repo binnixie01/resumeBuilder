@@ -1,3 +1,30 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.form{
+    background-color: #A1CCD1;
+    width: 30vw;
+
+}
+form{padding: 1rem;}
+input,textarea{
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 8px;
+    margin: 5px 0 5px 3px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: Helvetica,Arial, sans-serif;
+    font-size: 16px;
+    color: #333;
+}
+
+body{
+    background-color: #F4F2DE;
+}
+
+#cv{background-color: #fff;
+    /* height: px;
+    width: 768px; */
+}

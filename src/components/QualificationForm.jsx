@@ -6,7 +6,7 @@ const QualificationForm = (props) => {
   };
   return (
     <>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="form rounded-lg flex flex-col gap-4">
         <div>
           <label>School : </label>
           <input

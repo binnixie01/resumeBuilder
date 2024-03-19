@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import '../index.css'
 const PersonalForm = (props) => {
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -7,10 +7,10 @@ const PersonalForm = (props) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div>
+    <form onSubmit={handleSubmit} className="rounded-lg flex flex-col gap-4 form">
+      <div >
         <label>
-          Name :
+          Name : 
           <input
             type="text"
             value={props.name}
@@ -36,7 +36,7 @@ const PersonalForm = (props) => {
         <label htmlFor="phoneNumber">Phone No : </label>
         <input
           type="number"
-          name="phoneNumber"
+          name="number"
           id="phoneNumber"
           value={props.number}
           onChange={props.onEdit}
