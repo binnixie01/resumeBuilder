@@ -18,6 +18,7 @@ input,textarea{
     font-family: Helvetica,Arial, sans-serif;
     font-size: 16px;
     color: #333;
+    width: 60%;
 }
 
 body{
@@ -25,6 +26,26 @@ body{
 }
 
 #cv{background-color: #fff;
-    /* height: px;
-    width: 768px; */
+    height: 54vw;
+    width: 40vw;
+    font-family: 'Montserrat','Helvetica','Arial';
+
+}
+label{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+}
+.details{overflow-wrap: break-word;
+    max-width: 20em;
+}
+
+@media print{
+    body *{
+        display: none;
+    }
+    #cv,#cv *{
+        display: block;
+    }
 }

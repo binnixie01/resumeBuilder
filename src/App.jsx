@@ -3,6 +3,7 @@ import PersonalForm from "./components/PersonalForm";
 import Cv from "./components/Cv";
 import QualificationForm from "./components/QualificationForm";
 import ExperienceForm from "./components/ExperienceForm";
+import jsPDF from "jspdf";
 
 const App = () => {
   const [personalInfo, setpPersonalInfo] = useState({
@@ -13,6 +14,7 @@ const App = () => {
   const [qualification, setQualification] = useState({
     school: "",
     degree: "",
+    grade:"",
     startDate: "",
     endDate: "",
   });
@@ -41,9 +43,18 @@ const App = () => {
     newExperience[e.target.name] = e.target.value;
     setExperience(newExperience);
   };
+const save=()=> {
+    print()
+
+   
+
+}
+
   return (
     <div id="home" className="flex justify-between">
-      <div id="form" className="flex flex-col gap-6 ml-12 mt-10">
+    <button id="saveButton" onClick={save} className="absolute rounded-lg text-sm font-semibold py-2.5 px-4 bg-slate-900 text-white ">Save Page</button>
+
+      <div id="form" className="flex flex-col gap-6 ml-20 mt-10">
         <PersonalForm
           name={personalInfo.name}
           email={personalInfo.email}
@@ -53,6 +64,7 @@ const App = () => {
         <QualificationForm
           school={qualification.school}
           degree={qualification.degree}
+          grade={qualification.grade}
           startDate={qualification.startDate}
           endDate={qualification.endDate}
           onEdit={handleQualification}
@@ -66,8 +78,8 @@ const App = () => {
           onEdit={handleExperience}
         />
       </div>
-      <div id="cv" className="mt-10 flex">
-        <Cv personalInfo={personalInfo} qualification={qualification} />
+      <div id="cv" className="mt-10 mr-20">
+        <Cv personalInfo={personalInfo} qualification={qualification} experience={experience}/>
       </div>
     </div>
   );

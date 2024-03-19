@@ -10,8 +10,7 @@ const PersonalForm = (props) => {
     <form onSubmit={handleSubmit} className="rounded-lg flex flex-col gap-4 form">
       <div >
         <label>
-          Name : 
-          <input
+          Name : <input
             type="text"
             value={props.name}
             id="name"
@@ -22,18 +21,17 @@ const PersonalForm = (props) => {
         </label>
       </div>
       <div>
-        <label htmlFor="email">Email : </label>
-        <input
+        <label>Email : <input
           type="text"
           id="email"
           name="email"
           value={props.email}
           onChange={props.onEdit}
           required
-        />
+        /></label>
       </div>
       <div>
-        <label htmlFor="phoneNumber">Phone No : </label>
+        <label>Phone No : 
         <input
           type="number"
           name="number"
@@ -41,7 +39,7 @@ const PersonalForm = (props) => {
           value={props.number}
           onChange={props.onEdit}
           required
-        />
+        /></label>
       </div>
     </form>
   );

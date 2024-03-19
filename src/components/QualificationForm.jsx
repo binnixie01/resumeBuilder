@@ -8,31 +8,39 @@ const QualificationForm = (props) => {
     <>
       <form onSubmit={handleSubmit} className="form rounded-lg flex flex-col gap-4">
         <div>
-          <label>School : </label>
-          <input
+          <label>School : <input
             type="text"
             id="school"
             name="school"
             value={props.school}
             onChange={props.onEdit}
-          />
+          /></label>
         </div>
         <div>
           <label>
-            Degree :
-            <input
+            Degree :<input
               type="text"
               id="degree"
               name="degree"
               value={props.degree}
               onChange={props.onEdit}
-            />{" "}
+            />
           </label>
         </div>
         <div>
           <label>
-            Start Date :
-            <input
+            Grade :<input
+              type="text"
+              id="grade"
+              name="grade"
+              value={props.grade}
+              onChange={props.onEdit}
+            />
+          </label>
+        </div>
+        <div>
+          <label>
+            Start Date :<input
               type="date"
               id="startDateDegree"
               name="startDate"
@@ -43,8 +51,7 @@ const QualificationForm = (props) => {
         </div>
         <div>
           <label>
-            End Date :
-            <input
+            End Date :<input
               type="date"
               name="endDate"
               id="endDateDegreee"

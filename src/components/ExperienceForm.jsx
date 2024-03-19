@@ -18,11 +18,12 @@ const ExperienceForm = (props) => {
           </label>
         </div>
         <div>
-          <label htmlFor="position">
+          <label>
             Position Title :
             <input
               type="text"
               id="position"
+              name="position"
               value={props.position}
               onChange={props.onEdit}
               required
@@ -54,7 +55,7 @@ const ExperienceForm = (props) => {
           </label>
         </div>
         <div>
-          <label className="flex items-center">
+          <label>
             Description :
             <textarea
               type="text"
